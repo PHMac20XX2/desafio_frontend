@@ -14,7 +14,7 @@
 
     <main>
       <section id="play-sessao">
-        <h2>Filmes em Cartaz (Melhores Avaliados)</h2>
+        <h2>Filmes em Cartaz (Melhores Avaliados)   </h2>
         <div id="lista-filmes" class="grid-filmes"></div>
       </section>
 
@@ -22,6 +22,9 @@
 
         <section id="filmes-avaliados">
             <h2>Suas Avaliações</h2>
+            <div class="busca-container">
+                <input type="text" id="input-busca-avaliados" placeholder="Buscar por título..." onkeyup="filtroAvaliados()">
+            </div>
             <div id="lista-avaliados" class="grid-filmes"></div>
     </main>
 
