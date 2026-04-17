@@ -2,38 +2,36 @@
 
 # 🎬 DCmovies - Cinema na Palma da Mão
 
-Olá! Seja bem-vindo ao **DCmovies**. Este projeto nasceu de um desafio técnico para criar uma interface conectada ao mundo real do cinema, utilizando a API do The Movie Database (TMDB).
-
-A ideia aqui não era apenas listar filmes, mas criar uma experiência onde você possa ver o que está em alta, dar sua opinião e gerenciar suas próprias avaliações.
+Opa! Esse é o **DCmovies**. Projeto que nasceu de um desafio técnico para criar uma interface de cinema, utilizando a API do The Movie Database (TMDB).
 
 ---
 
-## 🚀 A Solução
+## 🚀 Solução
 
-Para este desafio, decidi seguir pelo caminho da **simplicidade robusta**. Em vez de usar frameworks pesados, utilizei o trio fundamental da web: **HTML5, CSS3 e JavaScript Moderno (ES6+)**.
+Para o desafio, decidi utilizar **HTML5, CSS3 e JavaScript** para reforçar meus conhecimentos nos mesmos.
 
 ### 🧠 Como o projeto funciona?
 
-1.  **Sessão de Visitante (Guest Session):** Para facilitar a vida de quem testa, o app cria automaticamente uma "Sessão de Visitante" assim que abre. Isso significa que você não precisa criar conta nem fazer login para começar a avaliar os filmes. Tudo acontece de forma fluida.
+1.  **Sessão de Visitante:** A sessão mostrada na tela seria a utilizada por um usuário visitante (guest)
 
-2.  **Filmes em Cartaz (Now Playing):** O app busca os filmes que estão nos cinemas agora. Para garantir que o usuário veja logo o que é bom, apliquei um algoritmo de **ordenação decrescente**. Ou seja: os filmes com as melhores notas da crítica aparecem primeiro.
+2.  **Filmes em Cartaz:** O app busca os filmes que estão nos cinemas agora. Apliquei um algoritmo de **ordenação decrescente** para que os filmes com as melhores notas da crítica aparecam primeiro.
 
-3.  **Localização (Português):** Toda a comunicação com a API foi configurada para o idioma `pt-BR`. Assim, títulos e sinopses aparecem como nós conhecemos aqui no Brasil.
+3.  **Linguagem (Português - PTBR):** Toda a comunicação com a API foi configurada para que o idioma mostrado seja o `pt-BR`.
 
-4.  **Interatividade (CRUD de Avaliações):** Você pode dar uma nota de 0.5 a 10 para qualquer filme. O app se encarrega de:
+4.  **Interatividade:** Você pode dar uma nota de 0.5 a 10 para qualquer filme. O app vai se encarregar de:
     - Enviar sua nota para o servidor.
     - Listar seus filmes avaliados em uma seção separada.
-    - Permitir que você remova uma avaliação se mudar de ideia, atualizando a tela instantaneamente (sem recarregar a página!).
+    - Permitir que você remova uma avaliação se mudar de ideia, atualizando a tela instantaneamente.
 
 ---
 
 ## 🎨 Design & Experiência (UI/UX)
 
-O visual foi inspirado nas grandes plataformas de streaming (Dark Mode). Algumas escolhas foram estratégicas:
+Me inspirei em plataformas de votos, muito utilizadas por intusiastas de cinema, onde tambem apliquei:
 
-- **Efeito Hover:** Ao passar o mouse nos pôsteres, eles ganham destaque e brilho, convidando ao clique.
-- **Barra de Busca Inteligente:** Na sua lista de avaliados, você pode filtrar filmes pelo nome em tempo real. Ideal para quando sua lista começar a crescer!
-- **Feedback Visual:** Usei transições suaves e badges (etiquetas) coloridas para as notas, facilitando a leitura rápida.
+- **Efeito Hover**
+- **Transições**
+- **Bagdes**
 
 ---
 
@@ -51,10 +49,11 @@ O visual foi inspirado nas grandes plataformas de streaming (Dark Mode). Algumas
 1.  Clone este repositório.
 2.  Abra o arquivo `script.js` e insira sua `API_KEY` do TMDB na primeira linha.
 3.  Abra o `index.html` no seu navegador (recomendo usar a extensão _Live Server_ do VS Code).
-4.  Divirta-se avaliando seus filmes favoritos!
+4.  Começe a avaliar os filmes!
 
 ---
 
 ### ✍️ Considerações Finais
 
-Este projeto foi uma excelente oportunidade para praticar como lidar com estados de uma aplicação (como uma sessão ativa) e como manter a interface do usuário sincronizada com dados que vêm de um servidor externo. Espero que goste do resultado! 🍿
+Esse desafio foi muito importante para meu desenvolvimento, onde consegui aplicar meus conhecimentos adquiridos até o momento de forma pratica.
+Acredito que o resultado tenha sido muito satisfatório!
