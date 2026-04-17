@@ -46,18 +46,6 @@ header {
   animation: fadeInTitle 1.5s ease-out;
 }
 
-#play-sessao h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 475px;
-  height: 4px;
-  background-color: grey;
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
 .grid-filmes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

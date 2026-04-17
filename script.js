@@ -4,7 +4,7 @@ const IMG_URL = "https://image.tmdb.org/t/p/w500"; //base url imagens
 
 let guestSessionId = "";
 
-//iniciar
+//função iniciar
 async function inicializar() {
   try {
     const res = await fetch(
@@ -97,13 +97,22 @@ async function carregarAvaliados() {
 async function removerVoto(filmeId) {
   const url = `${BASE_URL}/movie/${filmeId}/rating?api_key=${API_KEY}&guest_session_id=${guestSessionId}`;
 
-  await fetch(url, {
-    method: "DELETE",
-    headers: { "Content-Type": "application/json;charset=utf-8" },
-  });
+  try {
+    const res = await fetch(url, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json;charset=utf-8" },
+    });
 
-  alert("Avaliação removida!");
-  carregarAvaliados();
+    if (res.ok) {
+      alert("Avaliação removida!");
+      await carregarAvaliados();
+    } else {
+      alert("Não foi possível remover a avaliação.");
+    }
+  } catch (erro) {
+    console.error("Erro ao remover voto:", erro);
+    alert("Erro de conexão ao tentar remover.");
+  }
 }
 
 inicializar();
