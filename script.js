@@ -115,4 +115,31 @@ async function removerVoto(filmeId) {
   }
 }
 
+window.onscroll = function () {
+  scrollFunction();
+};
+
+//função mostrar botão voltar ao topo
+function scrollFunction() {
+  const btnTopo = document.getElementById("btn-topo");
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    btnTopo.style.display = "block";
+  } else {
+    btnTopo.style.display = "none";
+  }
+}
+
+//função voltar para topo da página
+function voltarAoTopo() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+window.voltarAoTopo = voltarAoTopo;
+
 inicializar();
