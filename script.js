@@ -4,7 +4,7 @@ const IMG_URL = "https://image.tmdb.org/t/p/w500"; //base url imagens
 
 let guestSessionId = "";
 
-// Inicia a aplicação
+//iniciar
 async function inicializar() {
   try {
     const res = await fetch(
@@ -13,7 +13,6 @@ async function inicializar() {
     const data = await res.json();
     guestSessionId = data.guest_session_id;
 
-    // ID: info-sessão
     document.getElementById("info-sessão").innerText = "Sessão de Visitante";
 
     carregarFilmesCartaz();
@@ -68,7 +67,7 @@ function renderizarCards(filmes, containerId, permitirAvaliar) {
   });
 }
 
-// Envia a avaliação (POST)
+//enviar avaliação
 async function votar(filmeId) {
   const nota = document.getElementById(`input-${filmeId}`).value;
   const url = `${BASE_URL}/movie/${filmeId}/rating?api_key=${API_KEY}&guest_session_id=${guestSessionId}`;
@@ -83,19 +82,18 @@ async function votar(filmeId) {
   carregarAvaliados();
 }
 
-// Lista filmes avaliados pelo visitante (GET)
+//listar filmes avaliados (id: lista-avaliados)
 async function carregarAvaliados() {
   const url = `${BASE_URL}/guest_session/${guestSessionId}/rated/movies?api_key=${API_KEY}&language=pt-BR`;
   const res = await fetch(url);
   const data = await res.json();
 
-  // ID: lista-avaliados
   if (data.results) {
     renderizarCards(data.results, "lista-avaliados", false);
   }
 }
 
-// Remove a avaliação (DELETE)
+//remover a avaliação
 async function removerVoto(filmeId) {
   const url = `${BASE_URL}/movie/${filmeId}/rating?api_key=${API_KEY}&guest_session_id=${guestSessionId}`;
 
